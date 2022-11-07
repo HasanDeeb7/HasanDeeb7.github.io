@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.google.com/specimen/Lexend+Deca");
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+:root {
+  --back-color: #0a0c1b;
+  --card-back-color: #1c1938;
+  --lavender: #a959d7;
+  --indigo: #6f6d84;
+  --border-radius: 10px;
+  --image-over: #8927c283;
+}
+
+/* CSS RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--back-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+.card-container {
+  background-color: var(--card-back-color);
+  color: white;
+  border-radius: var(--border-radius);
+  display: flex;
+  gap: 1rem;
+  margin: 12rem auto;
+
+}
+
+.is-purple {
+  color: var(--lavender);
+}
+
+.left-part_container {
+  width: 45%;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 20px;
+}
+.card-blog {
+  line-height: 1.52rem;
+  font-family: "Inter", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 900;
+  color: var(--indigo);
+  margin: 2rem 0;
+}
+.card-info_container {
+  display: flex;
+  justify-content: space-between;
+}
+.stats-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 0.2rem;
+}
+.stats-info > span:nth-child(2) {
+  color: var(--indigo);
+}
+.stats-info > span:nth-child(1) {
+  font-family: "Inter", sans-serif;
+}
+.img-container {
+  width: 55%;
+  background: linear-gradient(to bottom, var(--image-over), var(--image-over)),
+    url(../images/image-header-desktop.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0 10px 10px 0;
+}
+
+@media screen and (max-width: 860px) {
+  .card-container {
+    flex-direction: column-reverse;
+    margin-top: 4rem;
+    width: 70%;
+  }
+  .left-part_container {
+    width: 100%;
+    font-size: 1.5rem;
+    margin: auto;
+  }
+  .img-container {
+    background: linear-gradient(var(--image-over), var(--image-over)),
+      url(../images/image-header-mobile.jpg);
+    width: auto;
+    height: 20rem;
+    border-radius: 10px 10px 0 0;
+    background-size: cover;
+   
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .card-container {
+    width: 80%;
+    flex-direction: column-reverse;
+  }
+  .left-part_container {
+    width: 100%;
+    padding: 3rem;
+    justify-content: space-between;
+  }
+  .left-part_container h1, p{
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  .left-part_container p{
+    font-weight: 900;
+  }
+
+  .card-info_container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .stats-info{
+    text-align: center;
+  }
+  .img-container{
+    background: linear-gradient(var(--image-over),var(--image-over)),url(../images/image-header-mobile.jpg);
+    width: 100%;
+    height:300px;
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+  }
+} 
